@@ -31,10 +31,24 @@ NAV UL {
 
 NAV .logo {
     margin-right: 20px;
+    max-width: 70px;
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+NAV .logo IMG {
+    width: 80%;
+    height: auto;
 }
 
 NAV .left-links li {
     margin-right: 20px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: gray; /* Change the color to your desired hover color */
 }
 
 NAV .left-links li:last-child {
