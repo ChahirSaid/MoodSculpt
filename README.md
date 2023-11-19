@@ -11,10 +11,7 @@ MoodSculpt is a web application designed to help users track their moods, gain i
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [Challenges](#challenges)
-- [Collaboration](#collaboration)
-- [Project Updates](#project-updates)
-- [Progress](#progress)
+- [Authors](#authors)
 - [License](#license)
 
 ## Features
@@ -38,17 +35,20 @@ MoodSculpt is built using:
 
 ### API Routes for Web Client to Web Server Communication
 
-- `/api/moods`: 
+- `/api/moods`:
+
   - GET: Retrieve all mood entries for the logged-in user.
   - POST: Add a new mood entry for the logged-in user.
 
-- `/api/insights`: 
+- `/api/insights`:
+
   - GET: Retrieve insights into the logged-in user's mood patterns.
 
-- `/api/auth`: 
+- `/api/auth`:
+
   - POST: Authenticate the user and log them in.
 
-- `/api/register`: 
+- `/api/register`:
   - POST: Register a new user.
 
 ### API Endpoints or Function/Methods for Other Clients to Use
@@ -74,6 +74,10 @@ Refer to the [Data Model Diagram](link-to-diagram) for details on entities and r
 ## Contributing
 
 We welcome contributions! If you have suggestions, bug reports, or want to contribute code, please follow our [Contribution Guidelines](CONTRIBUTING.md).
+
+## Authors
+
+To view the list of contributors, check the [AUTHORS](AUTHORS) file in the project root.
 
 ## License
 
