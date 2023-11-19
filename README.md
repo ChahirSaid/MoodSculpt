@@ -57,7 +57,7 @@ No API endpoints provided for other clients in MoodSculpt.
 
 ### Data Model
 
-Refer to the ![Data Model Diagram](images/data-model.png) for details on entities and relationships.
+Refer to the [Data Model Diagram](images/data-model.png) for details on entities and relationships.
 
 ## Installation
 
