@@ -39,20 +39,21 @@ MoodSculpt is a web-based mood journal application that allows users to track an
 ### Installation
 
 1. Clone the repository:
-  -git clone https://github.com/ChahirSaid/MoodSculpt.git
+    - git clone https://github.com/ChahirSaid/MoodSculpt.git
+
 Change into the project directory:
-  -cd MoodSculpt
+    - cd MoodSculpt
 
 Install dependencies:
-   -pip install -r requirements.txt
+    - pip install -r requirements.txt
 
 Set up the database:
-  -flask db init
-  -flask db migrate
-  -flask db upgrade
+    - flask db init
+    - flask db migrate
+    - flask db upgrade
    
 Run the application:
-  -python app.py
+    - python app.py
    
 Visit http://localhost:5000 in your web browser.
 
