@@ -1,87 +1,80 @@
-# MoodSculpt - Mood Journal Project
+# MoodSculpt
+
+MoodSculpt is a web application designed to help users track their moods, gain insights into their emotional well-being, and improve mental health through personalized analytics and rewards.
 
 ## Table of Contents
 
-- [Overview](#overview)
 - [Features](#features)
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-  - [Usage](#usage)
+- [Architecture](#architecture)
+- [API Documentation](#api-documentation)
+- [Data Model](#data-model)
+- [Installation](#installation)
+- [Usage](#usage)
 - [Contributing](#contributing)
+- [Challenges](#challenges)
+- [Collaboration](#collaboration)
+- [Project Updates](#project-updates)
+- [Progress](#progress)
 - [License](#license)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgments)
-
-## Overview
-
-MoodSculpt is a web-based mood journal application that allows users to track and manage their emotions over time. The project is built using Flask, HTML, CSS, and SQLite for database storage.
 
 ## Features
 
-- **User Authentication:**
-  - Sign up and log in securely to access personalized mood tracking.
+- Log and track daily moods
+- View personalized insights and patterns
+- User-friendly interface for seamless mood entry
 
-- **Mood Tracking:**
-  - Record and visualize your daily moods.
-  - Add notes and tags to provide context to your mood entries.
+## Architecture
 
-- **Responsive Design:**
-  - Enjoy a seamless experience on various devices, including desktops, tablets, and smartphones.
+MoodSculpt is built using:
 
-## Getting Started
+- Front-end: HTML, CSS, JavaScript
+- Back-end: Flask, MySQL
+- API: RESTful API principles
+- Database: MySQL
+- Version Control: Git
+- Deployment: Yet to be decided
 
-### Prerequisites
+## API Documentation
 
-- [Python](https://www.python.org/) installed on your machine
-- [Flask](https://flask.palletsprojects.com/en/2.1.x/) framework
+### API Routes for Web Client to Web Server Communication
 
-### Installation
+- `/api/moods`: 
+  - GET: Retrieve all mood entries for the logged-in user.
+  - POST: Add a new mood entry for the logged-in user.
 
-1. Clone the repository:
-    - git clone https://github.com/ChahirSaid/MoodSculpt.git
+- `/api/insights`: 
+  - GET: Retrieve insights into the logged-in user's mood patterns.
 
-2. Change into the project directory:
-    - cd MoodSculpt
+- `/api/auth`: 
+  - POST: Authenticate the user and log them in.
 
-3. Install dependencies:
-    - pip install -r requirements.txt
+- `/api/register`: 
+  - POST: Register a new user.
 
-4. Set up the database:
-    - flask db init
-    - flask db migrate
-    - flask db upgrade
-   
-5. Run the application:
-    - python app.py
-   
-Visit http://localhost:5000 in your web browser.
+### API Endpoints or Function/Methods for Other Clients to Use
 
-### Usage
-Sign Up:
-   Create an account with a unique username and password.
-Log In:
-   Log in to access your personalized mood tracking dashboard.
-Record Mood:
-   Add daily mood entries, including notes and tags.
-Visualize Your Mood:
-   View your mood history and trends.
-   
+No API endpoints provided for other clients in MoodSculpt.
+
+### Data Model
+
+Refer to the [Data Model Diagram](link-to-diagram) for details on entities and relationships.
+
+## Installation
+
+1. Clone the repository: `git clone <repository-url>`
+2. Navigate to the project directory: `cd MoodSculpt`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Set up the database: `python manage.py migrate`
+
+## Usage
+
+1. Run the development server: `python manage.py runserver`
+2. Access the application at [http://localhost:8000](http://localhost:8000)
+
 ## Contributing
-If you'd like to contribute to MoodSculpt, please follow these steps:
-   Fork the repository.
-   Create a new branch (git checkout -b feature/your-feature-name).
-   Make your changes and commit them (git commit -am 'Add some feature').
-   Push to the branch (git push origin feature/your-feature-name).
-   Create a new Pull Request.
 
-## Authors
-Said Chahir - [Github](https://github.com/ChahirSaid)  
-Othmane Boubecheur - [Github](https://github.com/glackyy) / [Twitter](https://twitter.com/glackybeatz)
+We welcome contributions! If you have suggestions, bug reports, or want to contribute code, please follow our [Contribution Guidelines](CONTRIBUTING.md).
 
 ## License
-This project is licensed under the MIT License.
 
-## Acknowledgments
-Thank you to the contributors who have helped make this project possible.
-Feel free to customize the sections based on the specifics of your project. Include any additional information or details that would be relevant to users or potential contributors.
+This project is licensed under the [MIT License](LICENSE).
