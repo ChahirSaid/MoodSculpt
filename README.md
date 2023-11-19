@@ -61,7 +61,7 @@ Refer to the [Data Model Diagram](link-to-diagram) for details on entities and r
 
 ## Installation
 
-1. Clone the repository: `git clone <repository-url>`
+1. Clone the repository: `git clone https://github.com/ChahirSaid/MoodSculpt.git`
 2. Navigate to the project directory: `cd MoodSculpt`
 3. Install dependencies: `pip install -r requirements.txt`
 4. Set up the database: `python manage.py migrate`
