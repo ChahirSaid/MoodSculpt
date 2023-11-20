@@ -10,7 +10,7 @@
         <HEADER>
             <NAV>
                 <DIV class="logo">
-                    <SPAN>MoodSculpt</SPAN>
+                    <IMG src="{{ url_for('static', filename='images/Mood.png') }}" alt="MoodSculpt Logo">
                 </DIV>
                 <UL class="left-links">
                     <LI><A href="/">Home</A></LI>
@@ -29,9 +29,18 @@
         </HEADER>
         <MAIN>
             <SECTION class="hero">
-                <H1>Welcome to MoodSculpt</H1>
-                <P>Track Your Mood and Emotions with Ease.</P>
+                <DIV class="hero-content">
+                    <H1>Welcome to MoodSculpt</H1>
+                    <P>Track Your Mood and Emotions with Ease. Discover new insights into your emotional well-being
+                       and gain a deeper understanding of your feelings. Our platform makes it simple and intuitive to record and analyze your daily moods,
+                       providing you with valuable information to enhance your overall emotional health.
+                    </P>
+                    <A href="#features" class="btn">Discover More</a>
+                </DIV>
             </SECTION>
+            <DIV class="hero-image">
+                <IMG src="{{ url_for('static', filename='images/hero_image.png') }}" alt="heroimage">
+            </DIV>
             <SECTION class="features">
                 <H2> Key Features</H2>
                 <UL>
