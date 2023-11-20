@@ -1,0 +1,16 @@
+# requirements.txt
+
+# Flask and database
+Flask>=2.0.0,<3.0.0
+Flask-SQLAlchemy>=2.5.0,<3.0.0
+mysqlclient>=2.0.3,<3.0.0  # or use pymysql for MySQL
+
+# Front-end
+Bootstrap>=5.1.0,<6.0.0
+
+# Additional libraries
+requests>=2.26.0,<3.0.0
+
+# Development and testing
+pytest>=6.2.0,<7.0.0
+flake8>=4.0.0,<5.0.0

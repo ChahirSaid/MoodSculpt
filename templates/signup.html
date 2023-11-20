@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+    <script src="{{ url_for('static', filename='js/signup.js') }}" defer></script>
+    <title>SignUP</title>
+</head>
+<body>
+    <div class="parent-box">
+        <div class="icon">
+            <img src="{{ url_for('static', filename='images/Mood.png') }}" alt="MoodSculpt Logo">
+        </div>
+        <header>Create an Account</header>
+        <div class="signup-box">
+            <div class="input-box">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </div>
+            <div class="input-box">
+                <label for="email">Email address</label>
+                <input type="text" id="email" name="email">
+            </div>
+            <div class="input-box">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <span class="toggle-password" onclick="togglePassword('password')"></span>
+            </div>
+            <div class="input-box">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password">
+                <span class="toggle-password" onclick="togglePassword('confirm-password')"></span>
+            </div>
+            <input type="submit" class="btn" value="Sign Up">
+        </div>
+        <div class="login-link">
+            <p>Already have an account? <a href="#">Login</a></p>
+        </div>
+    </div>
+</body>
+</html>
