@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <div class="parent-box">
+        <div class="icon">
+            <img src="{{ url_for('static', filename='images/Mood.png') }}" alt="MoodSculpt Logo">
+        </div>
+        <header>Sign in to MoodSculpt</header>
+        <div class="login-box">
+            <form method="POST" action="{{ url_for('login') }}">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+                <div class="input-box">
+                    <label for="email">Email address</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="input-box">
+                    <label for="password">
+                        <span>Password</span>
+                        <a href="#">Forgot Password?</a>
+                    </label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <input type="submit" class="btn" value="Sign in">
+            </form>
+        </div>
+        <div class="signup">
+            <span>New to MoodSculpt</span>
+            <a href="/signup">Create an account</a>
+        </div>
+    </div>
+</body>
+</html>

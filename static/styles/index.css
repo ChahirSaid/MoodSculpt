@@ -81,26 +81,73 @@ MAIN {
     padding: 20px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
-    max-width: 800px;
-    margin: 20px auto;
+    max-width: 2000px;
+    margin: 20px 0;
 }
 
+.hero-image {
+    margin-left: 1000px ;
+}
 .hero,
 .features,
 .call-to-action {
-    background-color: #ffffff;
+    background-color: #0d1117;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
+    color: #ffffff;
 }
 
+
+/* Hero Section */
+.hero {
+    position: relative;
+    overflow: hidden;
+    max-width: 2000px;
+    margin: 0 auto;
+    color: #ffffff;
+}
+.hero A {
+    margin-left: 500px;
+    margin-top: 40px;
+}
+.hero H1 {
+    width: 400px;
+}
+.hero P {
+    padding-top: 20px;
+    width: 700px;
+}
+
+.hero-content {
+    max-width: 800px; /* Adjust as needed */
+    padding: 20px;
+    box-sizing: border-box;
+    order: 1;
+    z-index: 1;
+    color: #ffffff;
+}
+
+.hero-image {
+    width: 200px;
+    position: relative;
+    top: -350px;
+}
+
+.features {
+   margin-top: -400px;
+}
+
+.hero A {
+    text-decoration: none;
+}
 /* Button Styles */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0d1117;
+    background-color: #24292e;
     color: #ffffff;
-    text-decoration: none;
+    text-decoration: solid;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
@@ -113,4 +160,7 @@ FOOTER {
     color: #ffffff;
     text-align: center;
     margin-top: 20px;
+}
+.call-to-action A {
+    text-decoration: none;
 }
