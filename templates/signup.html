@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
-    <script src="{{ url_for('static', filename='js/signup.js') }}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/signup.css') }}">
+    <script src="{{ url_for('static', filename='scripts/signup.js') }}" defer></script>
     <title>SignUP</title>
 </head>
 <body>
@@ -14,28 +14,38 @@
         </div>
         <header>Create an Account</header>
         <div class="signup-box">
-            <div class="input-box">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username">
-            </div>
-            <div class="input-box">
-                <label for="email">Email address</label>
-                <input type="text" id="email" name="email">
-            </div>
-            <div class="input-box">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
-                <span class="toggle-password" onclick="togglePassword('password')"></span>
-            </div>
-            <div class="input-box">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password">
-                <span class="toggle-password" onclick="togglePassword('confirm-password')"></span>
-            </div>
-            <input type="submit" class="btn" value="Sign Up">
+            <form method="post" action="{{ url_for('signup') }}">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+                <div class="input-box">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="input-box">
+                    <label for="email">Email address</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="input-box">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                    <span class="toggle-password" onclick="togglePassword('password')"></span>
+                </div>
+                <div class="input-box">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                    <span class="toggle-password" onclick="togglePassword('confirm-password')"></span>
+                </div>
+                <input type="submit" class="btn" value="Sign Up">
+            </form>
         </div>
         <div class="login-link">
-            <p>Already have an account? <a href="#">Login</a></p>
         </div>
     </div>
 </body>

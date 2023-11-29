@@ -13,22 +13,32 @@
         </div>
         <header>Sign in to MoodSculpt</header>
         <div class="login-box">
-            <div class="input-box">
-                <label for="email">Email address</label>
-                <input type="text" id="email" name="email">
-            </div>
-            <div class="input-box">
-                <label for="password">
-                    <span>Password</span>
-                    <a href="#">Forgot Password?</a>
-                </label>
-                <input type="password" id="password" name="password">
-            </div>
-            <input type="submit" class="btn" value="Sign in">
+            <form method="POST" action="{{ url_for('login') }}">
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        <ul>
+                            {% for message in messages %}
+                                <li>{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+                <div class="input-box">
+                    <label for="email">Email address</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="input-box">
+                    <label for="password">
+                        <span>Password</span>
+                        <a href="#">Forgot Password?</a>
+                    </label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <input type="submit" class="btn" value="Sign in">
+            </form>
         </div>
         <div class="signup">
             <span>New to MoodSculpt</span>
-            <a href="#">Create an account</a>
         </div>
     </div>
 </body>
