@@ -68,8 +68,11 @@ Refer to the [Data Model Diagram](images/data-model.png) for details on entities
 
 ## Usage
 
-1. Run the development server: `python manage.py runserver`
-2. Access the application at [http://localhost:8000](http://localhost:8000)
+1. Run the development server:
+  `$env:FLASK_APP = "app.py"
+  $env:FLASK_ENV = "development"
+  flask run`
+3. Access the application at [http://localhost:8000](http://localhost:8000)
 
 ## Contributing
 
