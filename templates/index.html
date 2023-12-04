@@ -3,6 +3,9 @@
     <HEAD>
         <META charset="UTF-8">
         <META name="viewport" content="width=device-width, initial-scale=1.0">
+        <META http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+        <META http-equiv="expires" content="0">
+        <META http-equiv="pragma" content="no-cache">    
         <LINK rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
         <TITLE>MoodSculpt</TITLE>
     </HEAD>
@@ -18,7 +21,7 @@
                     <LI><A href="/journal">Mood Journal</A></LI>
                 </UL>
                 <UL class="right-links">
-                    {% if 'username' in session %}
+                    {% if current_user.is_authenticated %}
                         <LI><A href="/logout">Logout</A></LI>
                     {% else %}
                         <LI><A href="/login">Login</A></LI>
