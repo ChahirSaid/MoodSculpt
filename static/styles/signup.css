@@ -49,9 +49,19 @@ header {
     border-radius: 7px;
 }
 
+.signup-box p {
+    padding-left: 30px;
+    padding-bottom: 10px;
+    color: white;
+}
+
 .input-box {
     margin-bottom: 15px;
     position: relative;
+}
+
+#password-strength {
+    color: red;
 }
 
 label {

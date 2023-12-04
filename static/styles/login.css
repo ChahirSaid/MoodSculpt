@@ -41,6 +41,7 @@ header {
     color: #fff;
 }
 
+
 .login-box {
     background-color: #161b22;
     width: 100%;
@@ -48,7 +49,11 @@ header {
     border: 1px solid #21262d;
     border-radius: 7px;
 }
-
+.login-box p {
+    padding-left: 40px;
+    padding-bottom: 10px;
+    color: white;
+}
 .input-box {
     margin-bottom: 15px;
 }

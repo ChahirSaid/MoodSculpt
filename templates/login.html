@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">
     <title>Login</title>
 </head>
 <body>
     <div class="parent-box">
         <div class="icon">
+            <a href="{{ url_for('index') }}">
             <img src="{{ url_for('static', filename='images/Mood.png') }}" alt="MoodSculpt Logo">
+            </a>
         </div>
         <header>Sign in to MoodSculpt</header>
         <div class="login-box">
@@ -18,14 +23,14 @@
                     {% if messages %}
                         <ul>
                             {% for message in messages %}
-                                <li>{{ message }}</li>
+                                <p>{{ message }}</p>
                             {% endfor %}
                         </ul>
                     {% endif %}
                 {% endwith %}
                 <div class="input-box">
-                    <label for="email">Email address</label>
-                    <input type="text" id="email" name="email">
+                    <label for="identifier">Email address</label>
+                    <input type="text" id="identifier" name="identifier" required>
                 </div>
                 <div class="input-box">
                     <label for="password">

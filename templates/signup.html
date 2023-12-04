@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/signup.css') }}">
     <script src="{{ url_for('static', filename='scripts/signup.js') }}" defer></script>
     <title>SignUP</title>
@@ -10,7 +13,9 @@
 <body>
     <div class="parent-box">
         <div class="icon">
+            <a href="{{ url_for('index') }}">
             <img src="{{ url_for('static', filename='images/Mood.png') }}" alt="MoodSculpt Logo">
+            </a>
         </div>
         <header>Create an Account</header>
         <div class="signup-box">
@@ -19,27 +24,28 @@
                     {% if messages %}
                         <ul>
                             {% for message in messages %}
-                                <li>{{ message }}</li>
+                                <p>{{ message }}</p>
                             {% endfor %}
                         </ul>
                     {% endif %}
                 {% endwith %}
                 <div class="input-box">
                     <label for="username">Username</label>
-                    <input type="text" id="username" name="username">
+                    <input type="text" id="username" name="username" required>
                 </div>
                 <div class="input-box">
                     <label for="email">Email address</label>
-                    <input type="text" id="email" name="email">
+                    <input type="text" id="email" name="email" required>
                 </div>
                 <div class="input-box">
                     <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
+                    <input type="password" id="password" name="password" required>
                     <span class="toggle-password" onclick="togglePassword('password')"></span>
                 </div>
+                <div id="password-strength"></div>
                 <div class="input-box">
                     <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="confirm-password">
+                    <input type="password" id="confirm-password" name="confirm-password" required>
                     <span class="toggle-password" onclick="togglePassword('confirm-password')"></span>
                 </div>
                 <input type="submit" class="btn" value="Sign Up">
