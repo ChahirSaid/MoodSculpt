@@ -1,64 +1,43 @@
 <!DOCTYPE html>
-<HTML lang="en">
-    <HEAD>
-        <META charset="UTF-8">
-        <META name="viewport" content="width=device-width, initial-scale=1.0">
-        <META http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
-        <META http-equiv="expires" content="0">
-        <META http-equiv="pragma" content="no-cache">    
-        <LINK rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
-        <TITLE>MoodSculpt</TITLE>
-    </HEAD>
-    <BODY>
-        <HEADER>
-            <NAV>
-                <DIV class="logo">
-                    <IMG src="{{ url_for('static', filename='images/Mood.png') }}" alt="MoodSculpt Logo">
-                </DIV>
-                <UL class="left-links">
-                    <LI><A href="/">Home</A></LI>
-                    <LI><A href="/about">About Us</A></LI>
-                    <LI><A href="/journal">Mood Journal</A></LI>
-                </UL>
-                <UL class="right-links">
-                    {% if current_user.is_authenticated %}
-                        <LI><A href="/logout">Logout</A></LI>
-                    {% else %}
-                        <LI><A href="/login">Login</A></LI>
-                        <LI><A href="/signup">Sign Up</A></LI>
-                    {% endif %}
-                </UL>
-            </NAV>
-        </HEADER>
-        <MAIN>
-            <SECTION class="hero">
-                <DIV class="hero-content">
-                    <H1>Welcome to MoodSculpt</H1>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+        <meta http-equiv="expires" content="0">
+        <meta http-equiv="pragma" content="no-cache">    
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+        <title>MoodSculpt</title>
+    </head>
+    <body>
+        <nav>
+            <div class="nav__logo"><a href="/">
+                <img src="{{ url_for('static', filename='images/Mood.png') }}" alt="MoodSclupt" class="logo-img">
+                <span>MoodSclupt</span>
+            </a></div>
+            <ul class="nav__links">
+                {% if current_user.is_authenticated %}
+                <li class="link"><a href="/logout" class="link">Logout</a></li>
+                {% else %}
+                <li class="link"><a href="/login" class="link">Login</a></li>
+                <li class="link"><a href="/signup" class="link">Signup</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+        <header style="background:
+        url('{{ url_for('static', filename='images/bg-1.jpg') }}') center center no-repeat;
+        background-size: cover;">
+            <div class="section__container">
+                <div class="header__content">
+                    <h1>MoodSclupt</h1>
                     <P>Track Your Mood and Emotions with Ease. Discover new insights into your emotional well-being
-                       and gain a deeper understanding of your feelings. Our platform makes it simple and intuitive to record and analyze your daily moods,
-                       providing you with valuable information to enhance your overall emotional health.
+                    and gain a deeper understanding of your feelings. Our platform makes it simple and intuitive to record and analyze your daily moods,
+                    providing you with valuable information to enhance your overall emotional health.
                     </P>
-                    <A href="#features" class="btn">Discover More</a>
-                </DIV>
-            </SECTION>
-            <DIV class="hero-image">
-                <IMG src="{{ url_for('static', filename='images/hero_image.png') }}" alt="heroimage">
-            </DIV>
-            <SECTION class="features">
-                <H2> Key Features</H2>
-                <UL>
-                    <LI>Simple and Intuitive Mood Tracking</LI>
-                    <LI>Secure and Private User Accounts</LI>
-                    <LI>Personalized Insights into Your Mood Patterns</LI>
-                </UL>
-            </SECTION>
-            <SECTION class="call-to-action">
-                <P>Get Started Today and Take Control Of Your Emotions!!</P>
-                <A href="/signup" class="btn">Sign Up</A>
-            </SECTION>
-        </MAIN>
-        <FOOTER>
-            <P>&copy; 2023 MoodSculpt. All Rights Reserved.</P>
-        </FOOTER>
-    </BODY>
-</HTML>
+                    <a href="/signup" class="button">Discover more</a>
+                </div>
+            </div>
+        </header>
+    </body>
+</html>
